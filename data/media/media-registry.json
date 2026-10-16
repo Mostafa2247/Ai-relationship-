@@ -1,0 +1,98 @@
+{
+  "media_1792053728372_tgap6hg": {
+    "id": "media_1792053728372_tgap6hg",
+    "originalFileName": "test_screenshot.png",
+    "mimeType": "image/png",
+    "sizeBytes": 68,
+    "mediaType": "image",
+    "filePath": "/app/applet/data/media/media_1792053728372_tgap6hg.png",
+    "userId": "test_user_1",
+    "relationshipId": "rel_test_1",
+    "label": "سكرين شوت من الشات القديم",
+    "createdAt": "2026-10-15T08:42:08.372Z"
+  },
+  "media_1792055077683_yngemip": {
+    "id": "media_1792055077683_yngemip",
+    "originalFileName": "test_video.mp4",
+    "mimeType": "video/mp4",
+    "sizeBytes": 7356,
+    "mediaType": "video",
+    "filePath": "/app/applet/data/media/media_1792055077683_yngemip.mp4",
+    "userId": "test-user",
+    "relationshipId": "rel-1",
+    "label": "",
+    "createdAt": "2026-10-15T09:04:37.683Z"
+  },
+  "media_1792153044873_stpnmd8": {
+    "id": "media_1792153044873_stpnmd8",
+    "originalFileName": "test_video.mp4",
+    "mimeType": "video/mp4",
+    "sizeBytes": 7356,
+    "mediaType": "video",
+    "filePath": "/app/applet/data/media/media_1792153044873_stpnmd8.mp4",
+    "userId": "user-test",
+    "relationshipId": "rel-test",
+    "label": "",
+    "createdAt": "2026-10-16T12:17:24.873Z"
+  },
+  "media_1792153233656_xfr2jfh": {
+    "id": "media_1792153233656_xfr2jfh",
+    "originalFileName": "1000114593.jpg",
+    "mimeType": "image/jpeg",
+    "sizeBytes": 151847,
+    "mediaType": "image",
+    "filePath": "/app/applet/data/media/media_1792153233656_xfr2jfh.jpg",
+    "userId": "ezyU01fzuaQJjGAGN67YPRZn4Ms2",
+    "relationshipId": "1792020602114_cf4tu0y",
+    "label": "",
+    "createdAt": "2026-10-16T12:20:33.657Z"
+  },
+  "media_1792153877037_tuf3sfi": {
+    "id": "media_1792153877037_tuf3sfi",
+    "originalFileName": "1000114372.jpg",
+    "mimeType": "image/jpeg",
+    "sizeBytes": 1223617,
+    "mediaType": "image",
+    "filePath": "/app/applet/data/media/media_1792153877037_tuf3sfi.jpg",
+    "userId": "ezyU01fzuaQJjGAGN67YPRZn4Ms2",
+    "relationshipId": "1792020602114_cf4tu0y",
+    "label": "",
+    "createdAt": "2026-10-16T12:31:17.038Z"
+  },
+  "media_1792154334061_spuv5va": {
+    "id": "media_1792154334061_spuv5va",
+    "originalFileName": "1000114597.jpg",
+    "mimeType": "image/jpeg",
+    "sizeBytes": 94435,
+    "mediaType": "image",
+    "filePath": "/app/applet/data/media/media_1792154334061_spuv5va.jpg",
+    "userId": "ezyU01fzuaQJjGAGN67YPRZn4Ms2",
+    "relationshipId": "1792020602114_cf4tu0y",
+    "label": "السناب الي ملك بعتته",
+    "createdAt": "2026-10-16T12:38:54.061Z"
+  },
+  "media_1792154334061_7xj4lek": {
+    "id": "media_1792154334061_7xj4lek",
+    "originalFileName": "1000114599.jpg",
+    "mimeType": "image/jpeg",
+    "sizeBytes": 240226,
+    "mediaType": "image",
+    "filePath": "/app/applet/data/media/media_1792154334061_7xj4lek.jpg",
+    "userId": "ezyU01fzuaQJjGAGN67YPRZn4Ms2",
+    "relationshipId": "1792020602114_cf4tu0y",
+    "label": "الشات",
+    "createdAt": "2026-10-16T12:38:54.061Z"
+  },
+  "media_1792155259255_z4n880s": {
+    "id": "media_1792155259255_z4n880s",
+    "originalFileName": "media_1792055077683_yngemip.mp4",
+    "mimeType": "video/mp4",
+    "sizeBytes": 7356,
+    "mediaType": "video",
+    "filePath": "/app/applet/data/media/media_1792155259255_z4n880s.mp4",
+    "userId": "test_user",
+    "relationshipId": "test_rel",
+    "label": "",
+    "createdAt": "2026-10-16T12:54:19.256Z"
+  }
+}

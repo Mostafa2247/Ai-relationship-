@@ -1,0 +1,6 @@
+{
+  "name": "رفيق العلاقات - AI Relationship Intelligence",
+  "description": "منصة ذكية قائمة على الأدلة لتحليل العلاقات الإنسانية والعاطفية باللهجة المصرية، مع إدارة الذاكرة، التحليل المفصل، وتوليد الردود.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

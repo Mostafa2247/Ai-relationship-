@@ -1,0 +1,123 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile settings and preferences",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 254 },
+        "themePreference": { "type": "string", "enum": ["light", "dark", "system"] },
+        "languagePreference": { "type": "string", "enum": ["ar", "en"] },
+        "aiResponseLanguage": { "type": "string", "enum": ["ar_eg", "ar_msa", "en"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "createdAt"]
+    },
+    "Relationship": {
+      "title": "Relationship",
+      "description": "A saved interpersonal relationship profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "relationshipType": { "type": "string", "enum": ["romantic", "friendship", "other"] },
+        "status": { "type": "string", "maxLength": 100 },
+        "contextDescription": { "type": "string", "maxLength": 2000 },
+        "summary": { "type": "string", "maxLength": 5000 },
+        "archived": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "displayName", "relationshipType", "createdAt"]
+    },
+    "Conversation": {
+      "title": "Conversation",
+      "description": "A conversation session within a relationship",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "relationshipId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "maxLength": 150 },
+        "lastMessagePreview": { "type": "string", "maxLength": 300 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["relationshipId", "title", "createdAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "A message within a conversation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "role": { "type": "string", "enum": ["user", "assistant", "system"] },
+        "content": { "type": "string", "maxLength": 20000 },
+        "analysisType": { "type": "string", "maxLength": 50 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["role", "content", "createdAt"]
+    },
+    "RelationshipMemory": {
+      "title": "RelationshipMemory",
+      "description": "An item of relationship context or memory",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "relationshipId": { "type": "string", "maxLength": 128 },
+        "content": { "type": "string", "maxLength": 2000 },
+        "category": { "type": "string", "enum": ["fact", "pattern", "interpretation", "preference", "unresolved"] },
+        "classification": { "type": "string", "enum": ["fact", "inference"] },
+        "confidence": { "type": "string", "enum": ["high", "moderate", "tentative", "unconfirmed"] },
+        "sourceReference": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["relationshipId", "content", "category", "classification", "createdAt"]
+    },
+    "RelationshipTimelineEvent": {
+      "title": "RelationshipTimelineEvent",
+      "description": "A notable timeline milestone or event",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "relationshipId": { "type": "string", "maxLength": 128 },
+        "eventSummary": { "type": "string", "maxLength": 500 },
+        "date": { "type": "string", "maxLength": 50 },
+        "evidenceNotes": { "type": "string", "maxLength": 2000 },
+        "sourceReference": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["relationshipId", "eventSummary", "date", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile document"
+    },
+    "/users/{userId}/relationships/{relationshipId}": {
+      "schema": "Relationship",
+      "description": "Relationships owned by the user"
+    },
+    "/users/{userId}/relationships/{relationshipId}/conversations/{conversationId}": {
+      "schema": "Conversation",
+      "description": "Conversations within a relationship"
+    },
+    "/users/{userId}/relationships/{relationshipId}/conversations/{conversationId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Messages inside a conversation"
+    },
+    "/users/{userId}/relationships/{relationshipId}/memory/{memoryId}": {
+      "schema": "RelationshipMemory",
+      "description": "Structured memory items for a relationship"
+    },
+    "/users/{userId}/relationships/{relationshipId}/timeline/{eventId}": {
+      "schema": "RelationshipTimelineEvent",
+      "description": "Timeline milestones for a relationship"
+    }
+  }
+}
